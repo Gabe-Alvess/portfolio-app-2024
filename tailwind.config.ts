@@ -13,8 +13,9 @@ const config: Config = {
     extend: {
       colors: {},
       fontFamily: {
-        philosopher: "'Philosopher', sans-serif;",
-        lemonada: "'Lemonada', cursive",
+        oswald: "'Oswald', sans-serif",
+        montserrat: "'Montserrat', sans-serif",
+        poppins: "'Poppins', sans-serif",
       },
       textShadow: {
         default: "0 2px 5px rgba(0, 0, 0, 0.5)",
@@ -29,26 +30,13 @@ const config: Config = {
       themes: {
         light: {
           colors: {
-            // background: "rgb(165, 243, 252)",
-            // foreground: "rgb(251, 207, 232)",
-            primary: {
-              // DEFAULT: "#11D1BE",
-              // foreground: "#000000",
-            },
-            // focus: "#11D1BE",
+            background: "#f2f1ef",
+            primary: "#161513",
+            secondary: "#e94d35",
+            // focus: "#e94d35",
           },
         },
-        dark: {
-          colors: {
-            // background: "rgb(3, 105, 161)",
-            // foreground: "rgb(251, 207, 232)",
-            primary: {
-              // DEFAULT: "#11D1BE",
-              // foreground: "#000000",
-            },
-            // focus: "#11D1BE",
-          },
-        },
+        dark: {},
       },
     }),
   ],
