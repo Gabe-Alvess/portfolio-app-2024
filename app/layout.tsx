@@ -1,6 +1,7 @@
 import "./globals.css";
-import { Providers } from "./providers";
 import type { Metadata } from "next";
+import { Providers } from "./providers";
+import NavbarComponent from "@/components/NavbarComponent";
 
 export const metadata: Metadata = {
   title: "Gabriel Alves - Junior Java Developer",
@@ -15,6 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body>
+        <NavbarComponent />
         <Providers>{children}</Providers>
       </body>
     </html>
