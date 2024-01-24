@@ -32,11 +32,18 @@ const config: Config = {
           colors: {
             background: "#f2f1ef",
             primary: "#161513",
-            secondary: "#e94d35",
+            secondary: "#18c662",
             focus: "#161513",
           },
         },
-        dark: {},
+        dark: {
+          colors: {
+            background: "#161513",
+            primary: "#f2f1ef",
+            secondary: "#006fee",
+            focus: "#e94d35",
+          },
+        },
       },
     }),
   ],

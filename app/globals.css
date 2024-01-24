@@ -12,5 +12,5 @@
 }
 
 .contact-anim {
-    @apply transition duration-300 ease-in-out hover:bg-black hover:text-white hover:underline;
+    @apply transition duration-300 ease-in-out hover:bg-black hover:text-white hover:underline dark:hover:bg-success dark:hover:text-black dark:hover:border-success;
 }

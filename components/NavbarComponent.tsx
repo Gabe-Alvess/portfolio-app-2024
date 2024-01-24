@@ -32,7 +32,7 @@ export default function NavbarComponent() {
         <p className="font-montserrat font-bold text-2xl pl-1">Alves.</p>
       </NavbarBrand>
 
-      <NavbarContent justify="center" className="hidden sm:flex gap-4">
+      <NavbarContent  justify="center" className="hidden sm:flex gap-4">
         <NavbarItem>
           <Link className="nav-item-anim" href="/">
             Home
