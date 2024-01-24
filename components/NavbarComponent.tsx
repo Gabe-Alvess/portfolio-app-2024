@@ -22,7 +22,7 @@ export default function NavbarComponent() {
   return (
     <Navbar onMenuOpenChange={setIsMenuOpen} isBlurred={false} isBordered shouldHideOnScroll className="font-poppins font-semibold border-b-primary">
       <NavbarBrand>
-        <Image src={Logo} alt="Logo" width={40} height={40} />
+        <Image src={Logo} alt="Logo" width={30} height={30} />
         <p className="font-montserrat font-bold text-2xl pl-1">Alves.</p>
       </NavbarBrand>
 
