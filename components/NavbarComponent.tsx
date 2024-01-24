@@ -34,27 +34,27 @@ export default function NavbarComponent() {
 
       <NavbarContent justify="center" className="hidden sm:flex gap-4">
         <NavbarItem>
-          <Link className="nav-item-anim" href="#">
+          <Link className="nav-item-anim" href="/">
             Home
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link className="nav-item-anim" href="#">
+          <Link className="nav-item-anim" href="/About">
             About
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link className="nav-item-anim" href="#">
+          <Link className="nav-item-anim" href="/Skills">
             Skills
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link className="nav-item-anim" href="#">
+          <Link className="nav-item-anim" href="/Game">
             Game
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link className="nav-item-anim" href="#">
+          <Link className="nav-item-anim" href="/Projects">
             Projects
           </Link>
         </NavbarItem>
@@ -73,7 +73,7 @@ export default function NavbarComponent() {
           <ThemeSwitch />
         </NavbarItem>
         <NavbarItem>
-          <Link className="font-medium border-1 border-primary py-2 px-5 contact-anim" href="#">
+          <Link className="font-medium border-1 border-primary py-2 px-5 contact-anim" href="/Contact">
             Let&apos;s Talk
           </Link>
         </NavbarItem>
@@ -82,7 +82,12 @@ export default function NavbarComponent() {
       <NavbarMenu>
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
-            <Link color="foreground" className="w-full font-poppins justify-center p-2 hover:text-secondary" href="#" size="lg">
+            <Link
+              color="foreground"
+              className="w-full font-poppins justify-center p-2 hover:text-secondary"
+              href={item === "Home" ? "/" : "/" + item}
+              size="lg"
+            >
               {item}
             </Link>
           </NavbarMenuItem>
