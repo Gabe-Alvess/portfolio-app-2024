@@ -33,7 +33,7 @@ const config: Config = {
             background: "#f2f1ef",
             primary: "#161513",
             secondary: "#e94d35",
-            // focus: "#e94d35",
+            focus: "#161513",
           },
         },
         dark: {},
