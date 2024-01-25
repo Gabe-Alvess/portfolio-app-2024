@@ -1,10 +1,17 @@
-import React from "react";
+"use client";
+
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 type Props = {};
 
 export const Logo = (props: Props) => {
+  const [mounted, setMounted] = useState(false);
   const { theme } = useTheme();
+
+  useEffect(() => setMounted(true), []);
+
+  if (!mounted) return null;
 
   return (
     <>
