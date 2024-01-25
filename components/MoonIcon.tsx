@@ -8,7 +8,7 @@ export const MoonIcon = (props: Props) => (
     role="presentation"
     viewBox="0 0 24 24"
     width={25}
-    className="transition duration-300 ease-in-out hover:text-secondary"
+    className="transition duration-300 ease-in-out hover:text-primary"
     {...props}
   >
     <path

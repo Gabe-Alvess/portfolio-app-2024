@@ -2,17 +2,9 @@
 
 import { Logo } from "./Logo";
 import { useState } from "react";
+import { Link } from "@nextui-org/link";
 import { ThemeSwitch } from "./ThemeSwitch";
-import {
-  Navbar,
-  NavbarContent,
-  NavbarItem,
-  NavbarBrand,
-  NavbarMenuToggle,
-  NavbarMenu,
-  NavbarMenuItem,
-  Link,
-} from "@nextui-org/react";
+import { Navbar, NavbarContent, NavbarItem, NavbarBrand, NavbarMenuToggle, NavbarMenu, NavbarMenuItem } from "@nextui-org/navbar";
 
 export default function NavbarComponent() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,14 +17,14 @@ export default function NavbarComponent() {
       isBlurred={false}
       isBordered
       shouldHideOnScroll
-      className="font-poppins font-semibold border-b-primary"
+      className="font-poppins font-semibold border-b-foreground"
     >
       <NavbarBrand>
         <Logo />
         <p className="font-montserrat font-bold text-2xl pl-1">Alves.</p>
       </NavbarBrand>
 
-      <NavbarContent  justify="center" className="hidden sm:flex gap-4">
+      <NavbarContent justify="center" className="hidden sm:flex gap-4">
         <NavbarItem>
           <Link className="nav-item-anim" href="/">
             Home
@@ -60,23 +52,23 @@ export default function NavbarComponent() {
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarContent justify="end" className="flex sm:hidden">
-        <ThemeSwitch />
-        <NavbarMenuToggle
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="w-12 h-11 rounded-none border-1 border-primary sm:hidden"
-        />
-      </NavbarContent>
-
       <NavbarContent justify="end" className="hidden sm:flex">
         <NavbarItem>
           <ThemeSwitch />
         </NavbarItem>
         <NavbarItem>
-          <Link className="font-medium border-1 border-primary py-2 px-5 contact-anim" href="/Contact">
+          <Link className="font-medium border-1 border-foreground py-2 px-5 contact-anim" href="/Contact">
             Let&apos;s Talk
           </Link>
         </NavbarItem>
+      </NavbarContent>
+
+      <NavbarContent justify="end" className="flex sm:hidden">
+        <ThemeSwitch />
+        <NavbarMenuToggle
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          className="w-12 h-11 rounded-none border-1 border-foreground sm:hidden"
+        />
       </NavbarContent>
 
       <NavbarMenu>
@@ -84,7 +76,7 @@ export default function NavbarComponent() {
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
               color="foreground"
-              className="w-full font-poppins justify-center p-2 hover:text-secondary"
+              className="w-full font-poppins justify-center p-2 hover:text-success dark:hover:text-primary"
               href={item === "Home" ? "/" : "/" + item}
               size="lg"
             >
