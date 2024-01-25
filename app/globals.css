@@ -61,10 +61,10 @@
   }
 }
 
-.nav-item-anim {
-  @apply transition duration-300 ease-in-out border-foreground text-foreground hover:text-success hover:border-b-2 dark:hover:text-primary;
+.item-selected {
+  @apply text-success border-b-2 border-foreground dark:text-primary;
 }
 
-.contact-anim {
-  @apply transition duration-300 ease-in-out text-foreground hover:bg-black hover:text-white hover:underline dark:hover:bg-success dark:hover:text-black dark:hover:border-success;
+.nav-item-anim {
+  @apply transition duration-300 ease-in-out border-foreground text-foreground hover:text-success hover:border-b-2 dark:hover:text-primary;
 }

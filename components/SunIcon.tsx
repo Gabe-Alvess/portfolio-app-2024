@@ -4,11 +4,11 @@ export const SunIcon = (props: Props) => (
   <svg
     aria-hidden="true"
     focusable="false"
-    height={25}
+    height={20}
     role="presentation"
     viewBox="0 0 24 24"
-    width={25}
-    className="text-foreground transition duration-300 ease-in-out hover:text-warning"
+    width={20}
+    className="mt-1 text-foreground transition duration-300 ease-in-out hover:text-warning"
     {...props}
   >
     <g fill="currentColor">

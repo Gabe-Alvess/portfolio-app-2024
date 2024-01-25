@@ -4,11 +4,11 @@ export const MoonIcon = (props: Props) => (
   <svg
     aria-hidden="true"
     focusable="false"
-    height={25}
+    height={20}
     role="presentation"
     viewBox="0 0 24 24"
-    width={25}
-    className="transition duration-300 ease-in-out hover:text-primary"
+    width={20}
+    className="mt-1 transition duration-300 ease-in-out hover:text-primary"
     {...props}
   >
     <path
