@@ -61,10 +61,18 @@
   }
 }
 
-.item-selected {
-  @apply text-success border-b-2 border-foreground dark:text-primary;
+.selected-nav-item {
+  @apply text-success border-b-2 border-foreground dark:text-primary font-bold;
 }
 
-.nav-item-anim {
-  @apply transition duration-300 ease-in-out border-foreground text-foreground hover:text-success hover:border-b-2 dark:hover:text-primary;
+.nav-item {
+  @apply transition duration-300 ease-in-out border-b-2 border-transparent text-foreground hover:text-success hover:border-foreground dark:hover:text-primary;
+}
+
+.nav-menu-item {
+  @apply w-full font-poppins font-medium justify-center p-2 transition duration-300 ease-in-out text-foreground hover:text-success dark:hover:text-primary;
+}
+
+.selected-menu-item {
+  @apply w-full font-poppins font-bold justify-center p-2 text-success dark:text-primary;
 }

@@ -27,23 +27,34 @@ export default function NavbarComponent() {
     };
   }, [currentPath]);
 
-  const handleSelectedItemBasedOnPath = (item: string) => {
-    let itemClasses = "nav-item-anim";
+  const selectNavItem = (item: string) => {
+    let navItemClass = "nav-item";
 
     if (currentPath === item) {
-      itemClasses = "item-selected";
+      navItemClass = "selected-nav-item";
     }
 
-    return itemClasses;
+    return navItemClass;
+  };
+
+  const selectMenuItem = (item: string) => {
+    let menuItemClass = "nav-menu-item";
+
+    if (currentPath === item) {
+      menuItemClass = "selected-menu-item";
+    }
+
+    return menuItemClass;
   };
 
   return (
     <Navbar
+      isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
       isBlurred={false}
       isBordered
       shouldHideOnScroll
-      className="font-poppins font-semibold border-b-foreground"
+      className="font-poppins font-medium border-b-foreground"
     >
       <NavbarContent className="flex sm:hidden">
         <NavbarMenuToggle
@@ -59,32 +70,32 @@ export default function NavbarComponent() {
 
       <NavbarContent justify="center" className="hidden sm:flex gap-4">
         <NavbarItem>
-          <Link className={handleSelectedItemBasedOnPath("#Home")} href="#Home">
+          <Link className={selectNavItem("#Home")} href="#Home">
             Home
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link className={handleSelectedItemBasedOnPath("#About")} href="#About">
+          <Link className={selectNavItem("#About")} href="#About">
             About
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link className={handleSelectedItemBasedOnPath("#Skills")} href="#Skills">
+          <Link className={selectNavItem("#Skills")} href="#Skills">
             Skills
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link className={handleSelectedItemBasedOnPath("#Game")} href="#Game">
+          <Link className={selectNavItem("#Game")} href="#Game">
             Game
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link className={handleSelectedItemBasedOnPath("#Projects")} href="#Projects">
+          <Link className={selectNavItem("#Projects")} href="#Projects">
             Projects
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link className={handleSelectedItemBasedOnPath("#Contact")} href="#Contact">
+          <Link className={selectNavItem("#Contact")} href="#Contact">
             Contact
           </Link>
         </NavbarItem>
@@ -104,10 +115,11 @@ export default function NavbarComponent() {
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
-              color="foreground"
-              className="w-full font-poppins justify-center p-2 hover:text-success dark:hover:text-primary"
-              href={item === "Home" ? "#" : "#" + item}
               size="lg"
+              href={"#" + item}
+              color="foreground"
+              onClick={() => setIsMenuOpen(false)}
+              className={selectMenuItem("#" + item)}
             >
               {item}
             </Link>
