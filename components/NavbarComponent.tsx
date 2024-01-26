@@ -54,7 +54,7 @@ export default function NavbarComponent() {
       isBlurred={false}
       isBordered
       shouldHideOnScroll
-      className="font-poppins font-medium border-b-foreground"
+      className="font-poppins border-b-foreground"
     >
       <NavbarContent className="flex sm:hidden">
         <NavbarMenuToggle

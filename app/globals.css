@@ -70,7 +70,7 @@
 }
 
 .nav-menu-item {
-  @apply w-full font-poppins font-medium justify-center p-2 transition duration-300 ease-in-out text-foreground hover:text-success dark:hover:text-primary;
+  @apply w-full font-poppins justify-center p-2 transition duration-300 ease-in-out text-foreground hover:text-success dark:hover:text-primary;
 }
 
 .selected-menu-item {
