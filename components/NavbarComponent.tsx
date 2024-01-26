@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { Link } from "@nextui-org/link";
 import { ThemeSwitch } from "./ThemeSwitch";
 import { Navbar, NavbarContent, NavbarItem, NavbarBrand, NavbarMenuToggle, NavbarMenu, NavbarMenuItem } from "@nextui-org/navbar";
+import { LangSwitch } from "./LangSwitch";
 
 export default function NavbarComponent() {
   const [currentPath, setCurrentPath] = useState("#Home");
@@ -54,7 +55,7 @@ export default function NavbarComponent() {
       isBlurred={false}
       isBordered
       shouldHideOnScroll
-      className="font-poppins border-b-foreground"
+      className="font-poppins border-foreground"
     >
       <NavbarContent className="flex sm:hidden">
         <NavbarMenuToggle
@@ -107,7 +108,7 @@ export default function NavbarComponent() {
         </NavbarItem>
 
         <NavbarItem>
-          <p className="text-lg">EN▾</p>
+          <LangSwitch />
         </NavbarItem>
       </NavbarContent>
 

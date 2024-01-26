@@ -8,7 +8,7 @@ export const SunIcon = (props: Props) => (
     role="presentation"
     viewBox="0 0 24 24"
     width={20}
-    className="mt-1 text-foreground transition duration-300 ease-in-out hover:text-warning"
+    className="mt-1 transition duration-300 ease-in-out hover:text-warning"
     {...props}
   >
     <g fill="currentColor">

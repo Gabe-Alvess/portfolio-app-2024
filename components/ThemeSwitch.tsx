@@ -21,6 +21,7 @@ export const ThemeSwitch = (props: Props) => {
         onClick={() => {
           setTheme(theme === "light" ? "dark" : "light");
         }}
+        className="focus:text-warning dark:focus:text-primary"
       >
         {theme === "light" ? <SunIcon /> : <MoonIcon />}
       </button>

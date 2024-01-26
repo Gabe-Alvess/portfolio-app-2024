@@ -76,3 +76,7 @@
 .selected-menu-item {
   @apply w-full font-poppins font-bold justify-center p-2 text-success dark:text-primary;
 }
+
+.lang-menu-trigger {
+  @apply flex items-center font-poppins font-semibold text-lg text-foreground transition duration-300 ease-in-out hover:text-success dark:hover:text-primary focus:text-success dark:focus:text-primary;
+}
