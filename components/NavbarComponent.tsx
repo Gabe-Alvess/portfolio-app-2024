@@ -7,8 +7,7 @@ import { ThemeSwitch } from "./ThemeSwitch";
 import { Navbar, NavbarContent, NavbarItem, NavbarBrand, NavbarMenuToggle, NavbarMenu, NavbarMenuItem } from "@nextui-org/navbar";
 
 export default function NavbarComponent() {
-  const [selected, setSelected] = useState("Home");
-  const [currentPath, setCurrentPath] = useState("");
+  const [currentPath, setCurrentPath] = useState("#Home");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuItems = ["Home", "About", "Skills", "Game", "Projects", "Contact"];
 
@@ -19,17 +18,19 @@ export default function NavbarComponent() {
 
     window.addEventListener("hashchange", handleHashChange);
 
+    if (currentPath === "") {
+      setCurrentPath("#Home");
+    }
+
     return () => {
       window.removeEventListener("hashchange", handleHashChange);
     };
-  }, []);
+  }, [currentPath]);
 
-  const handleSelectedItem = (item: string) => {
+  const handleSelectedItemBasedOnPath = (item: string) => {
     let itemClasses = "nav-item-anim";
 
-    if (item === selected) {
-      itemClasses = "item-selected";
-    } else if (currentPath === `#${selected}`) {
+    if (currentPath === item) {
       itemClasses = "item-selected";
     }
 
@@ -58,32 +59,32 @@ export default function NavbarComponent() {
 
       <NavbarContent justify="center" className="hidden sm:flex gap-4">
         <NavbarItem>
-          <Link onClick={() => setSelected("Home")} className={handleSelectedItem("Home")} href="#Home">
+          <Link className={handleSelectedItemBasedOnPath("#Home")} href="#Home">
             Home
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link onClick={() => setSelected("About")} className={handleSelectedItem("About")} href="#About">
+          <Link className={handleSelectedItemBasedOnPath("#About")} href="#About">
             About
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link onClick={() => setSelected("Skills")} className={handleSelectedItem("Skills")} href="#Skills">
+          <Link className={handleSelectedItemBasedOnPath("#Skills")} href="#Skills">
             Skills
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link onClick={() => setSelected("Game")} className={handleSelectedItem("Game")} href="#Game">
+          <Link className={handleSelectedItemBasedOnPath("#Game")} href="#Game">
             Game
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link onClick={() => setSelected("Projects")} className={handleSelectedItem("Projects")} href="#Projects">
+          <Link className={handleSelectedItemBasedOnPath("#Projects")} href="#Projects">
             Projects
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link onClick={() => setSelected("Contact")} className={handleSelectedItem("Contact")} href="#Contact">
+          <Link className={handleSelectedItemBasedOnPath("#Contact")} href="#Contact">
             Contact
           </Link>
         </NavbarItem>
@@ -95,7 +96,7 @@ export default function NavbarComponent() {
         </NavbarItem>
 
         <NavbarItem>
-          <p className="text-lg">{currentPath}</p>
+          <p className="text-lg">EN▾</p>
         </NavbarItem>
       </NavbarContent>
 
