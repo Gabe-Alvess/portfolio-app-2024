@@ -62,11 +62,11 @@
 }
 
 .selected-nav-item {
-  @apply text-success border-b-2 border-foreground dark:text-primary font-bold;
+  @apply text-success border-b-2 border-foreground dark:text-primary font-semibold;
 }
 
 .nav-item {
-  @apply transition duration-300 ease-in-out border-b-2 border-transparent text-foreground hover:text-success hover:border-foreground dark:hover:text-primary;
+  @apply transition duration-300 ease-in-out border-b-2 border-transparent text-foreground font-semibold hover:text-success hover:border-foreground dark:hover:text-primary;
 }
 
 .nav-menu-item {

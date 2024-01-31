@@ -1,37 +1,28 @@
 "use client";
 
 import { Logo } from "./Logo";
-import { useEffect, useState } from "react";
-import { Link } from "@nextui-org/link";
-import { ThemeSwitch } from "./ThemeSwitch";
-import { Navbar, NavbarContent, NavbarItem, NavbarBrand, NavbarMenuToggle, NavbarMenu, NavbarMenuItem } from "@nextui-org/navbar";
 import { LangSwitch } from "./LangSwitch";
+import { ThemeSwitch } from "./ThemeSwitch";
+import { useEffect, useState } from "react";
+import { Navbar, NavbarContent, NavbarItem, NavbarBrand, NavbarMenuToggle, NavbarMenu, NavbarMenuItem } from "@nextui-org/navbar";
 
-export default function NavbarComponent() {
-  const [currentPath, setCurrentPath] = useState("#Home");
+type Props = {
+  currentPage: string;
+};
+
+const NavbarComponent = (props: Props) => {
+  const [currentPage, setCurrentPage] = useState("home");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuItems = ["Home", "About", "Skills", "Game", "Projects", "Contact"];
 
   useEffect(() => {
-    const handleHashChange = () => {
-      setCurrentPath(window.location.hash);
-    };
-
-    window.addEventListener("hashchange", handleHashChange);
-
-    if (currentPath === "") {
-      setCurrentPath("#Home");
-    }
-
-    return () => {
-      window.removeEventListener("hashchange", handleHashChange);
-    };
-  }, [currentPath]);
+    setCurrentPage(props.currentPage);
+  }, [props.currentPage]);
 
   const selectNavItem = (item: string) => {
     let navItemClass = "nav-item";
 
-    if (currentPath === item) {
+    if (currentPage === item) {
       navItemClass = "selected-nav-item";
     }
 
@@ -41,11 +32,16 @@ export default function NavbarComponent() {
   const selectMenuItem = (item: string) => {
     let menuItemClass = "nav-menu-item";
 
-    if (currentPath === item) {
+    if (currentPage === item) {
       menuItemClass = "selected-menu-item";
     }
 
     return menuItemClass;
+  };
+
+  const scrollTo = (pageId: string) => {
+    const targetPage = document.querySelector(`#${pageId}`);
+    targetPage?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -54,7 +50,6 @@ export default function NavbarComponent() {
       onMenuOpenChange={setIsMenuOpen}
       isBlurred={false}
       isBordered
-      shouldHideOnScroll
       className="font-poppins border-foreground"
     >
       <NavbarContent className="flex sm:hidden">
@@ -71,34 +66,34 @@ export default function NavbarComponent() {
 
       <NavbarContent justify="center" className="hidden sm:flex gap-4">
         <NavbarItem>
-          <Link className={selectNavItem("#Home")} href="#Home">
+          <button onClick={() => scrollTo("home")} className={selectNavItem("home")}>
             Home
-          </Link>
+          </button>
         </NavbarItem>
         <NavbarItem>
-          <Link className={selectNavItem("#About")} href="#About">
+          <button onClick={() => scrollTo("about")} className={selectNavItem("about")}>
             About
-          </Link>
+          </button>
         </NavbarItem>
         <NavbarItem>
-          <Link className={selectNavItem("#Skills")} href="#Skills">
+          <button onClick={() => scrollTo("skills")} className={selectNavItem("skills")}>
             Skills
-          </Link>
+          </button>
         </NavbarItem>
         <NavbarItem>
-          <Link className={selectNavItem("#Game")} href="#Game">
+          <button onClick={() => scrollTo("game")} className={selectNavItem("game")}>
             Game
-          </Link>
+          </button>
         </NavbarItem>
         <NavbarItem>
-          <Link className={selectNavItem("#Projects")} href="#Projects">
+          <button onClick={() => scrollTo("projects")} className={selectNavItem("projects")}>
             Projects
-          </Link>
+          </button>
         </NavbarItem>
         <NavbarItem>
-          <Link className={selectNavItem("#Contact")} href="#Contact">
+          <button onClick={() => scrollTo("contact")} className={selectNavItem("contact")}>
             Contact
-          </Link>
+          </button>
         </NavbarItem>
       </NavbarContent>
 
@@ -115,18 +110,23 @@ export default function NavbarComponent() {
       <NavbarMenu>
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
-            <Link
-              size="lg"
-              href={"#" + item}
+            <button
               color="foreground"
-              onClick={() => setIsMenuOpen(false)}
-              className={selectMenuItem("#" + item)}
+              onClick={() => {
+                setIsMenuOpen(false),
+                  setTimeout(() => {
+                    scrollTo(item.toLowerCase());
+                  }, 400);
+              }}
+              className={selectMenuItem(item.toLowerCase())}
             >
               {item}
-            </Link>
+            </button>
           </NavbarMenuItem>
         ))}
       </NavbarMenu>
     </Navbar>
   );
-}
+};
+
+export default NavbarComponent;
