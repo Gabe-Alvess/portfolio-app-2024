@@ -57,24 +57,24 @@ export default function RootLayout({
       <body>
         <Providers attribute="class" defaultTheme="system" enableSystem>
           <NavbarComponent currentPage={currentPage} />
-          <div id="home" ref={homeRef}>
+          <section id="home" ref={homeRef}>
             {children}
-          </div>
-          <div id="about" ref={aboutRef}>
+          </section>
+          <section id="about" ref={aboutRef}>
             <About />
-          </div>
-          <div id="skills" ref={skillsRef}>
+          </section>
+          <section id="skills" ref={skillsRef}>
             <Skills />
-          </div>
-          <div id="game" ref={gameRef}>
+          </section>
+          <section id="game" ref={gameRef}>
             <Game />
-          </div>
-          <div id="projects" ref={projectsRef}>
+          </section>
+          <section id="projects" ref={projectsRef}>
             <Projects />
-          </div>
-          <div id="contact" ref={contactRef}>
+          </section>
+          <section id="contact" ref={contactRef}>
             <Contact />
-          </div>
+          </section>
         </Providers>
       </body>
     </html>

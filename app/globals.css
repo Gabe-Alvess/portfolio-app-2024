@@ -56,8 +56,14 @@
   * {
     @apply border-border;
   }
+  html {
+    @apply snap-mandatory snap-y scroll-pt-16;
+  }
   body {
     @apply bg-background text-foreground;
+  }
+  section {
+    @apply snap-start;
   }
 }
 
