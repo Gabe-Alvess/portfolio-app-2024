@@ -4,10 +4,10 @@ export const SunIcon = (props: Props) => (
   <svg
     aria-hidden="true"
     focusable="false"
-    height={20}
+    height={22}
     role="presentation"
     viewBox="0 0 24 24"
-    width={20}
+    width={22}
     className="mt-1 transition duration-300 ease-in-out hover:text-warning"
     {...props}
   >

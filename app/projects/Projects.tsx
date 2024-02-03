@@ -7,7 +7,7 @@ const Projects = (props: Props) => {
     <main>
       <Container>
         <div className="h-screen flex justify-center items-center">
-          <p className="text-5xl font-montserrat font-semibold">PROJECTS PAGE</p>
+          <p className="text-5xl font-semibold">PROJECTS PAGE</p>
         </div>
       </Container>
     </main>

@@ -50,7 +50,7 @@ const NavbarComponent = (props: Props) => {
       onMenuOpenChange={setIsMenuOpen}
       isBlurred={false}
       isBordered
-      className="font-poppins border-foreground"
+      className="border-foreground"
     >
       <NavbarContent className="flex sm:hidden">
         <NavbarMenuToggle
@@ -61,7 +61,7 @@ const NavbarComponent = (props: Props) => {
 
       <NavbarBrand>
         <Logo />
-        <p className="font-montserrat font-bold text-2xl pl-1">Alves.</p>
+        <p className="font-semibold text-3xl pl-1">Alves.</p>
       </NavbarBrand>
 
       <NavbarContent justify="center" className="hidden sm:flex gap-4">
@@ -107,9 +107,9 @@ const NavbarComponent = (props: Props) => {
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarMenu>
+      <NavbarMenu className="justify-center gap-20 items-center">
         {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
+          <NavbarMenuItem className="" key={`${item}-${index}`}>
             <button
               color="foreground"
               onClick={() => {

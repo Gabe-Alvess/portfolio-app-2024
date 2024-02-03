@@ -27,7 +27,7 @@ export const LangSwitch = (props: Props) => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger className="lang-menu-trigger">
-        {currentLang} <CaretDownIcon className="text-foreground" />
+        {currentLang} <CaretDownIcon className="text-foreground w-5 h-auto" />
       </DropdownMenuTrigger>
       <DropdownMenuContent>
         <DropdownMenuItem onClick={() => setCurrentLang("NL")} className={removeSelectedLang("NL")}>

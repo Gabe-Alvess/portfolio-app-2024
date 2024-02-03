@@ -76,8 +76,7 @@ const config = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       fontFamily: {
-        montserrat: "'Montserrat', sans-serif",
-        poppins: "'Poppins', sans-serif",
+        "Bai-Jamjuree": "Bai Jamjuree, sans-serif",
       },
       textShadow: {
         default: "0 2px 5px rgba(0, 0, 0, 0.5)",

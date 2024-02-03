@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -60,29 +59,29 @@
     @apply snap-mandatory snap-y scroll-pt-16;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-Bai-Jamjuree;
   }
   section {
     @apply snap-start;
   }
 }
 
-.selected-nav-item {
-  @apply text-success border-b-2 border-foreground dark:text-primary font-semibold;
+.nav-item {
+  @apply transition duration-300 ease-in-out border-b-2 border-transparent text-foreground text-xl font-semibold hover:text-success hover:border-foreground dark:hover:text-primary;
 }
 
-.nav-item {
-  @apply transition duration-300 ease-in-out border-b-2 border-transparent text-foreground font-semibold hover:text-success hover:border-foreground dark:hover:text-primary;
+.selected-nav-item {
+  @apply text-success text-xl font-bold border-b-2 border-foreground dark:text-primary;
 }
 
 .nav-menu-item {
-  @apply w-full font-poppins justify-center p-2 transition duration-300 ease-in-out text-foreground hover:text-success dark:hover:text-primary;
+  @apply transition duration-300 ease-in-out font-semibold text-2xl text-foreground border-b-2 border-transparent hover:border-foreground hover:text-success dark:hover:text-primary;
 }
 
 .selected-menu-item {
-  @apply w-full font-poppins font-bold justify-center p-2 text-success dark:text-primary;
+  @apply font-bold border-b-2 border-foreground text-2xl text-success dark:text-primary;
 }
 
 .lang-menu-trigger {
-  @apply flex items-center font-poppins font-semibold text-lg text-foreground transition duration-300 ease-in-out hover:text-success dark:hover:text-primary focus:text-success dark:focus:text-primary;
+  @apply flex items-center text-xl text-foreground font-semibold transition duration-300 ease-in-out hover:text-success dark:hover:text-primary focus:text-success dark:focus:text-primary;
 }

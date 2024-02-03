@@ -7,7 +7,7 @@ const Contact = (props: Props) => {
     <main>
       <Container>
         <div className="h-screen flex justify-center items-center">
-          <p className="text-5xl font-montserrat font-semibold">CONTACT PAGE</p>
+          <p className="text-5xl font-semibold">CONTACT PAGE</p>
         </div>
       </Container>
     </main>

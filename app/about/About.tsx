@@ -7,7 +7,7 @@ const About = (props: Props) => {
     <main>
       <Container>
         <div className="h-screen flex justify-center items-center">
-          <p className="text-5xl font-montserrat font-semibold">ABOUT PAGE</p>
+          <p className="text-5xl font-semibold">ABOUT PAGE</p>
         </div>
       </Container>
     </main>
