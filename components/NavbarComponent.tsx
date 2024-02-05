@@ -52,10 +52,10 @@ const NavbarComponent = (props: Props) => {
       isBordered
       className="border-foreground"
     >
-      <NavbarContent className="flex sm:hidden">
+      <NavbarContent className="flex md:hidden">
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="w-12 h-11 rounded-none border-1 border-foreground sm:hidden"
+          className="w-12 h-11 rounded-none border-1 border-foreground md:hidden"
         />
       </NavbarContent>
 
@@ -64,7 +64,7 @@ const NavbarComponent = (props: Props) => {
         <p className="font-semibold text-3xl pl-1">Alves.</p>
       </NavbarBrand>
 
-      <NavbarContent justify="center" className="hidden sm:flex gap-4">
+      <NavbarContent justify="center" className="hidden md:flex gap-4">
         <NavbarItem>
           <button onClick={() => scrollTo("home")} className={selectNavItem("home")}>
             Home
