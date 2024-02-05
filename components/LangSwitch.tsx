@@ -13,7 +13,7 @@ import { CaretDownIcon } from "@radix-ui/react-icons";
 type Props = {};
 
 export const LangSwitch = (props: Props) => {
-  const [currentLang, setCurrentLang] = useState("NL");
+  const [currentLang, setCurrentLang] = useState("EN");
 
   const removeSelectedLang = (lang: string) => {
     return lang === currentLang ? "hidden" : "";

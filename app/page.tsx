@@ -16,7 +16,7 @@ export default function Home() {
               <p>AIMING TO BE A</p>
               <p>FULL STACK DEVELOPER</p>
             </div>
-            <div className="flex gap-10">
+            <div className="flex gap-10 sm:gap-24 sm:w-full sm:justify-start">
               <button className="iconBtn group">
                 <a href="cv/Gabriel_Alves_CV_EN.pdf" download>
                   <FileTextIcon className="w-10 h-10 mx-auto" />
