@@ -9,6 +9,7 @@ import Contact from "./contact/Contact";
 import Projects from "./projects/Projects";
 import { useEffect, useRef, useState } from "react";
 import NavbarComponent from "@/components/NavbarComponent";
+import ScrollTopButton from "@/components/ScrollTopButton";
 
 export default function RootLayout({
   children,
@@ -75,6 +76,7 @@ export default function RootLayout({
           <section id="contact" ref={contactRef}>
             <Contact />
           </section>
+          <ScrollTopButton currentPage={currentPage} />
         </Providers>
       </body>
     </html>
