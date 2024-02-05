@@ -23,7 +23,8 @@ export const ThemeSwitch = (props: Props) => {
         }}
         className="focus:text-warning dark:focus:text-primary"
       >
-        {theme === "light" ? <SunIcon /> : <MoonIcon />}
+        <SunIcon />
+        <MoonIcon />
       </button>
     </div>
   );

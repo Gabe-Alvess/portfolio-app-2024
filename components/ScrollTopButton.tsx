@@ -23,7 +23,7 @@ const ScrollTopButton = (props: Props) => {
   return (
     <div className="fixed bottom-2 w-full flex justify-end">
       <button onClick={() => scrollTop()} className={`${isVisible === true ? "opacity-100" : "opacity-0"} topBtn`}>
-        <ArrowUpIcon className="w-5 h-5" />
+        <ArrowUpIcon className="w-7 h-7" />
       </button>
     </div>
   );

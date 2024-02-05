@@ -56,7 +56,7 @@
     @apply border-border;
   }
   html {
-    @apply snap-mandatory snap-y scroll-pt-16;
+    @apply snap-mandatory snap-y;
   }
   body {
     @apply bg-background text-foreground font-Bai-Jamjuree;
@@ -87,5 +87,13 @@
 }
 
 .topBtn {
-  @apply rounded-full bg-success ring-foreground dark:bg-primary-300 p-2 mr-4 mb-2 transition transform  duration-300 ease-in-out hover:bg-warning-400 hover:dark:bg-success hover:ring-2 hover:scale-125;
+  @apply rounded-full bg-success ring-foreground dark:bg-primary-300 p-3 mr-4 mb-2 transition transform  duration-300 ease-in-out hover:bg-warning-400 hover:dark:bg-success hover:ring-2 hover:scale-110;
+}
+
+.iconBtn {
+  @apply rounded-full w-16 h-16 relative border-2 border-foreground transition duration-300 hover:text-sky-600 hover:border-sky-600 hover:dark:text-success hover:dark:border-success;
+}
+
+.iconBtnText {
+  @apply absolute -bottom-8 text-lg font-bold transform scale-0 group-hover:scale-100 transition-transform duration-300 ease-in-out;
 }
