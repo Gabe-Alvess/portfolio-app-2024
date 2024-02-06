@@ -90,12 +90,12 @@
   @apply rounded-full bg-success ring-foreground dark:bg-primary-300 p-3 mr-4 mb-2 transition transform  duration-300 ease-in-out hover:bg-warning-400 hover:dark:bg-success hover:ring-2 hover:scale-110;
 }
 
-.home-container {
-  @apply h-screen flex flex-col justify-center gap-12 items-center sm:flex-row;
+.home-outer-container {
+  @apply h-screen flex flex-col justify-center items-center gap-7  sm:flex-row;
 }
 
-.home-elements-container {
-  @apply flex flex-col items-center gap-12;
+.home-inner-container {
+  @apply flex flex-col items-center gap-7 sm:mt-16;
 }
 
 .home-text-container {
@@ -103,7 +103,7 @@
 }
 
 .home-icon-btn-container {
-  @apply flex gap-10 sm:gap-24 sm:w-full sm:justify-start;
+  @apply flex gap-10 sm:gap-16 sm:ml-2;
 }
 
 .home-icon-btn {
