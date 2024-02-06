@@ -86,14 +86,34 @@
   @apply flex items-center text-xl text-foreground font-semibold transition duration-300 ease-in-out hover:text-success dark:hover:text-primary focus:text-success dark:focus:text-primary;
 }
 
-.topBtn {
+.top-btn {
   @apply rounded-full bg-success ring-foreground dark:bg-primary-300 p-3 mr-4 mb-2 transition transform  duration-300 ease-in-out hover:bg-warning-400 hover:dark:bg-success hover:ring-2 hover:scale-110;
 }
 
-.iconBtn {
-  @apply rounded-full w-16 h-16 relative border-2 border-foreground transition duration-300 hover:text-sky-600 hover:border-sky-600 hover:dark:text-success hover:dark:border-success;
+.home-container {
+  @apply h-screen flex flex-col justify-center gap-12 items-center sm:flex-row;
 }
 
-.iconBtnText {
+.home-elements-container {
+  @apply flex flex-col items-center gap-12;
+}
+
+.home-text-container {
+  @apply text-2xl mt-10 text-center sm:mt-0 sm:text-left font-bold sm:text-2xl md:text-3xl lg:text-5xl xl:text-5xl 2xl:text-6xl;
+}
+
+.home-icon-btn-container {
+  @apply flex gap-10 sm:gap-24 sm:w-full sm:justify-start;
+}
+
+.home-icon-btn {
+  @apply rounded-full w-16 h-16 relative border-2 border-foreground transition duration-300 hover:text-warning hover:border-warning hover:dark:text-success hover:dark:border-success;
+}
+
+.home-icon-btn-text {
   @apply absolute -bottom-8 text-lg font-bold transform scale-0 group-hover:scale-100 transition-transform duration-300 ease-in-out;
+}
+
+.home-profile-img {
+  @apply rounded-full w-[250px] h-[250px] sm:w-[210px] sm:h-[210px] md:w-[250px] md:h-[250px] lg:w-[320px] lg:h-[320px] xl:w-[350px] xl:h-[350px] 2xl:w-[450px] 2xl:h-[450px];
 }
