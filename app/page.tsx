@@ -1,22 +1,35 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
 import Container from "@/components/ui/container";
 import { FileTextIcon, GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 
 export default function Home() {
+  const MotionImage = motion(Image);
+
   return (
     <main>
       <Container>
         <div className="home-outer-container">
-          <div className="home-text-container">
+          <motion.div
+            initial={{ y: -200, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 100 }}
+            transition={{ duration: 0.8 }}
+            className="home-text-container"
+          >
             <p>HI, I&#39;M GABRIEL.</p>
             <p>A CREATIVE</p>
             <p>AND DEDICATED</p>
             <p>FRONTEND DEVELOPER</p>
             <p>AIMING TO BE A</p>
             <p>FULL STACK DEVELOPER</p>
-          </div>
+          </motion.div>
           <div className="home-inner-container">
-            <Image
+            <MotionImage
+              initial={{ x: 200, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 100 }}
+              transition={{ duration: 0.8 }}
               src={"/images/photo-bg-shadow.jpg"}
               alt="profile photo"
               width={450}
@@ -25,24 +38,60 @@ export default function Home() {
               className="home-profile-img"
             />
             <div className="home-icon-btn-container">
-              <button className="home-icon-btn group">
+              <motion.button
+                initial={{ x: 200, rotate: 360, opacity: 0 }}
+                whileInView={{ x: 0, rotate: 0, opacity: 100 }}
+                transition={{ duration: 0.8 }}
+                className="home-icon-btn group"
+              >
                 <a href="cv/Gabriel_Alves_CV_EN.pdf" download>
                   <FileTextIcon className="w-10 h-10 mx-auto" />
                 </a>
-                <span className="home-icon-btn-text -right-2">RESUME</span>
-              </button>
-              <button className="home-icon-btn group">
+                <motion.span
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 100 }}
+                  transition={{ duration: 0.8 }}
+                  className="home-icon-btn-text -right-2"
+                >
+                  RESUME
+                </motion.span>
+              </motion.button>
+              <motion.button
+                initial={{ x: 200, rotate: 360, opacity: 0 }}
+                whileInView={{ x: 0, rotate: 0, opacity: 100 }}
+                transition={{ duration: 0.8 }}
+                className="home-icon-btn group"
+              >
                 <a href="https://www.linkedin.com/in/gabriel-webdev/" target="_blank">
                   <LinkedInLogoIcon className="w-10 h-10 mx-auto" />
                 </a>
-                <span className="home-icon-btn-text -right-3">LINKEDIN</span>
-              </button>
-              <button className="home-icon-btn group">
+                <motion.span
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 100 }}
+                  transition={{ duration: 0.8 }}
+                  className="home-icon-btn-text -right-3"
+                >
+                  LINKEDIN
+                </motion.span>
+              </motion.button>
+              <motion.button
+                initial={{ x: 200, rotate: 360, opacity: 0 }}
+                whileInView={{ x: 0, rotate: 0, opacity: 100 }}
+                transition={{ duration: 0.8 }}
+                className="home-icon-btn group"
+              >
                 <a href="https://github.com/Gabe-Alvess" target="_blank">
                   <GitHubLogoIcon className="w-10 h-10 mx-auto" />
                 </a>
-                <span className="home-icon-btn-text -right-1">GITHUB</span>
-              </button>
+                <motion.span
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 100 }}
+                  transition={{ duration: 0.8 }}
+                  className="home-icon-btn-text -right-1"
+                >
+                  GITHUB
+                </motion.span>
+              </motion.button>
             </div>
           </div>
         </div>
