@@ -45,13 +45,13 @@ export default function Home() {
                 className="home-icon-btn group"
               >
                 <a href="cv/Gabriel_Alves_CV_EN.pdf" download>
-                  <FileTextIcon className="w-10 h-10 mx-auto" />
+                  <FileTextIcon className="home-icon" />
                 </a>
                 <motion.span
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 100 }}
                   transition={{ duration: 0.8 }}
-                  className="home-icon-btn-text -right-2"
+                  className="home-icon-btn-text -right-3 lg:-right-2"
                 >
                   RESUME
                 </motion.span>
@@ -63,13 +63,13 @@ export default function Home() {
                 className="home-icon-btn group"
               >
                 <a href="https://www.linkedin.com/in/gabriel-webdev/" target="_blank">
-                  <LinkedInLogoIcon className="w-10 h-10 mx-auto" />
+                  <LinkedInLogoIcon className="home-icon" />
                 </a>
                 <motion.span
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 100 }}
                   transition={{ duration: 0.8 }}
-                  className="home-icon-btn-text -right-3"
+                  className="home-icon-btn-text -right-4 lg:-right-3"
                 >
                   LINKEDIN
                 </motion.span>
@@ -81,13 +81,13 @@ export default function Home() {
                 className="home-icon-btn group"
               >
                 <a href="https://github.com/Gabe-Alvess" target="_blank">
-                  <GitHubLogoIcon className="w-10 h-10 mx-auto" />
+                  <GitHubLogoIcon className="home-icon" />
                 </a>
                 <motion.span
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 100 }}
                   transition={{ duration: 0.8 }}
-                  className="home-icon-btn-text -right-1"
+                  className="home-icon-btn-text -right-2 lg:-right-1"
                 >
                   GITHUB
                 </motion.span>

@@ -52,7 +52,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <title>Gabriel Alves - Junior Java Developer</title>
+        <title>Gabriel Alves - Junior Frontend Developer</title>
         <meta name="description" content="A portfolio website, where I showcase my projects and skills." />
       </head>
       <body>

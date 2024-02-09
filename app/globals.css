@@ -103,15 +103,19 @@
 }
 
 .home-icon-btn-container {
-  @apply flex gap-10 sm:gap-16 sm:ml-2;
+  @apply flex gap-10 md:gap-14 md:ml-2 lg:gap-16;
 }
 
 .home-icon-btn {
-  @apply rounded-full w-16 h-16 relative border-2 border-foreground transition duration-300 hover:text-warning hover:border-warning hover:dark:text-success hover:dark:border-success;
+  @apply rounded-full w-12 h-12 lg:w-16 lg:h-16 relative border-2 border-foreground transition duration-300 hover:text-warning hover:border-warning hover:dark:text-success hover:dark:border-success;
+}
+
+.home-icon {
+  @apply w-6 h-6 lg:w-10 lg:h-10 mx-auto;
 }
 
 .home-icon-btn-text {
-  @apply absolute -bottom-8 text-lg font-bold transform scale-0 group-hover:scale-100 transition-transform duration-300 ease-in-out;
+  @apply absolute -bottom-8 text-base lg:text-large font-bold transform scale-0 group-hover:scale-100 transition-transform duration-300 ease-in-out;
 }
 
 .home-profile-img {
