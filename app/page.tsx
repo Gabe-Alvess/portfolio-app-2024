@@ -14,8 +14,8 @@ export default function Home() {
         <div className="home-outer-container">
           <motion.div
             initial={{ y: -200, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 100 }}
-            transition={{ duration: 0.8 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 1 }}
             className="home-text-container"
           >
             <p>HI, I&#39;M GABRIEL.</p>
@@ -28,20 +28,31 @@ export default function Home() {
           <div className="home-inner-container">
             <MotionImage
               initial={{ x: 200, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 100 }}
-              transition={{ duration: 0.8 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 2 }}
               src={"/images/photo-bg-shadow.jpg"}
               alt="profile photo"
               width={450}
               height={450}
               priority
-              className="home-profile-img"
+              className="home-profile-img dark:hidden"
+            />
+            <MotionImage
+              initial={{ x: 200, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 2 }}
+              src={"/images/photo-bg-blue.jpg"}
+              alt="profile photo"
+              width={450}
+              height={450}
+              priority
+              className="home-profile-img hidden dark:block"
             />
             <div className="home-icon-btn-container">
               <motion.button
-                initial={{ x: 200, rotate: 360, opacity: 0 }}
-                whileInView={{ x: 0, rotate: 0, opacity: 100 }}
-                transition={{ duration: 0.8 }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5, delay: 3 }}
                 className="home-icon-btn group"
               >
                 <a href="cv/Gabriel_Alves_CV_EN.pdf" download>
@@ -49,17 +60,17 @@ export default function Home() {
                 </a>
                 <motion.span
                   initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 100 }}
-                  transition={{ duration: 0.8 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5 }}
                   className="home-icon-btn-text -right-3 lg:-right-2"
                 >
                   RESUME
                 </motion.span>
               </motion.button>
               <motion.button
-                initial={{ x: 200, rotate: 360, opacity: 0 }}
-                whileInView={{ x: 0, rotate: 0, opacity: 100 }}
-                transition={{ duration: 0.8 }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5, delay: 4 }}
                 className="home-icon-btn group"
               >
                 <a href="https://www.linkedin.com/in/gabriel-webdev/" target="_blank">
@@ -67,17 +78,17 @@ export default function Home() {
                 </a>
                 <motion.span
                   initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 100 }}
-                  transition={{ duration: 0.8 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5 }}
                   className="home-icon-btn-text -right-4 lg:-right-3"
                 >
                   LINKEDIN
                 </motion.span>
               </motion.button>
               <motion.button
-                initial={{ x: 200, rotate: 360, opacity: 0 }}
-                whileInView={{ x: 0, rotate: 0, opacity: 100 }}
-                transition={{ duration: 0.8 }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5, delay: 5 }}
                 className="home-icon-btn group"
               >
                 <a href="https://github.com/Gabe-Alvess" target="_blank">
@@ -85,8 +96,8 @@ export default function Home() {
                 </a>
                 <motion.span
                   initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 100 }}
-                  transition={{ duration: 0.8 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5 }}
                   className="home-icon-btn-text -right-2 lg:-right-1"
                 >
                   GITHUB
