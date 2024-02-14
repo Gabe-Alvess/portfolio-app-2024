@@ -121,3 +121,15 @@
 .home-profile-img {
   @apply rounded-full w-[250px] h-[250px] sm:w-[210px] sm:h-[210px] md:w-[250px] md:h-[250px] lg:w-[320px] lg:h-[320px] xl:w-[350px] xl:h-[350px] 2xl:w-[450px] 2xl:h-[450px];
 }
+
+.skill-link {
+  @apply w-24 h-12 mx-auto mt-7 lg:w-auto lg:h-auto lg:mt-4 2xl:w-28 2xl:h-28 2xl:mx-0 2xl:mt-4 flex flex-col items-center gap-1 transition-transform ease-in-out duration-300 hover:scale-110;
+}
+
+.skill-logo {
+  @apply w-10 h-10 lg:w-16 lg:h-16 2xl:w-20 2xl:h-20 object-contain;
+}
+
+.skill-name {
+  @apply text-[10px] lg:text-xs 2xl:text-sm uppercase font-semibold text-center transform scale-0 group-hover:scale-100 transition-transform duration-300 ease-in-out;
+}
