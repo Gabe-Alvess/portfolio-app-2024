@@ -1,0 +1,31 @@
+.main {
+  @apply flex flex-col justify-center items-center h-screen;
+}
+
+.title {
+  @apply p-5 text-5xl text-green-400;
+}
+
+.wrapper {
+  @apply w-[80vmin] h-[80vmin] rounded-lg flex flex-col overflow-hidden bg-emerald-500 dark:bg-cyan-600;
+}
+
+.game-details {
+  /* @apply ; */
+}
+
+#game-board {
+  /* @apply ; */
+}
+
+.snake-head {
+  @apply bg-green-400 rounded-lg;
+}
+
+.snake-body {
+  @apply bg-green-400 rounded-2xl;
+}
+
+.food {
+  @apply bg-red-600 rounded-2xl;
+}
