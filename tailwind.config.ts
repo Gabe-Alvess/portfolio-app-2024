@@ -77,9 +77,16 @@ const config = {
       },
       fontFamily: {
         "Bai-Jamjuree": "Bai Jamjuree, sans-serif",
+        "Open-Sans": "Open Sans, sans-serif",
       },
       textShadow: {
         default: "0 2px 5px rgba(0, 0, 0, 0.5)",
+      },
+      gridTemplateColumns: {
+        "30": "repeat(30, minmax(0, 1fr))",
+      },
+      gridTemplateRows: {
+        "30": "repeat(30, minmax(0, 1fr))",
       },
     },
   },
